@@ -1,0 +1,207 @@
+@import "base.less";
+
+body{
+    height: 100px;
+}
+
+/* 页面主体 */
+#main{
+    /* 轮播 */
+    // .banner{
+    //     display: inline;
+    // }
+    .swiper-container {
+        .swiper-pagination>span{
+            display: inline-block;
+            margin-bottom: 6px;
+            width: 8px;
+            height: 8px;
+            background-color: #e029a9;
+        }
+        img{
+            width: 100%;
+        }
+        width: 100%;
+    }
+    /* 导航 */
+    .nav{
+        padding: 10px 0;
+        display: flex;
+        // h换行是加在父元素上
+        flex-wrap: wrap;
+        li{
+            flex: 25%;
+            margin-bottom: 5px;
+            a{ 
+                /* 要让文字和图片水平居中 */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                // text-align: center;
+                span{
+                    display: block;
+                }
+                img{
+                    width: 40px;
+                    height: 40px;
+        
+                }
+            }
+        }
+        
+    }
+    /* 秒杀 */
+    .seckill{
+        width: 100%;
+        // height: 500px;
+        background-color: wheat;
+        display: flex;
+        justify-content: center;
+        .box{
+            width: 350px;
+            height: 220px;
+            background-color: #fff;
+            margin-top: 10px;
+            .top{
+                padding: 8px 0;
+                display: flex;
+                position: relative;
+                >i{
+                   
+                    width: 20px;
+                    height: 25px;
+                    background: url("../images/seckill-icon.png") no-repeat;
+                    background-size: 20px 25px;
+                    position:absolute;
+                    left: 5px;
+                    top: 5px;
+                }
+                span{
+                    flex: 1;
+                    padding-left: 40px;
+                    color: red;
+                }
+                span:last-child{
+                    color: #000;
+                }
+                ul{
+                    margin-top: 2px;
+                    display: flex;
+                    flex: 1;
+                    li{
+                        background-color: #000;
+                        width: 15px;
+                        height: 15px;
+                        margin-left: 5px;
+                        line-height: 15px;
+                        color: #fff;
+                        text-align: center;
+                        &:nth-child(3n){
+                            background: none;
+                            width: 6px;
+                            font-weight: bold;
+                            color: #000;
+                            
+                        }
+                    }
+                    
+                }
+            }
+            .content{
+                padding: 10px 0;
+                ul{
+                    display:flex;
+                    text-align: center;
+                    li{
+                        flex: 1px;
+                        .picture{  
+                            width: 110px; 
+                            height: 110px;
+                            // height: 100px;               
+                            background: url("../images/seckill-img.jpg") no-repeat;
+                            background-size: 110px 110px;
+                        }
+                        >div:last-child{
+                            margin-top: 5px;
+                            p{
+                                color: red;
+                                line-height: 20px;
+                            }
+                        }
+                        
+                    }
+                }
+                
+            }
+        }
+    }
+    /* 京东超市 */
+    .coles{
+        display: flex;
+        background-color: wheat;
+        justify-content: center;
+        >div{
+            width: 350px;
+            height: 220px;
+            background-color: #fff;
+            margin-top: 10px;
+            .coles-top{
+                padding: 5px 0;
+                border-bottom: 1px solid #000;
+                h4{
+                    padding-left: 20px;
+                    font-size: 16px;
+                    display: flex;
+                    align-items: center;
+                    // margin-left: 50px;
+                    
+                    &:before{
+                        content: "";
+                        width: 5px;
+                        height: 18px;
+                        background-color: red;
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .coles-picture{
+                display: flex;
+                >li{
+                    flex: 1;
+                    &:first-of-type{
+                        a{
+                            display: flex;
+                            i{
+                                width: 100%;
+                                height: 162px;
+                                // height: 199px;
+                                background: url("../images/cp1.jpg") no-repeat;
+                                background-size: 160px 173px;
+                            }
+                        }
+                        
+                    }
+                    &:last-of-type{
+                        a{
+                            display: flex;
+                            i{
+                                width: 100%;
+                                height: 81px;
+                                // height: 199px;
+                                background: url("../images/cp3.jpg") no-repeat;
+                                background-size: 160px 87px;
+                            }
+                            &:first-of-type{
+                                i{
+                                    background: url("../images/cp2.jpg") no-repeat;
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+       
+    }
+}
